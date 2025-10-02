@@ -159,7 +159,6 @@ export class touchPan {
     this.canvasCxt.beginPath();
     this.canvasCxt.strokeStyle = crossLineColor;
     this.canvasCxt.lineWidth = 1;
-    this.canvasCxt.beginPath();
 
     //画出横线, 当info.yLabel为空白时，表示横线在主图和幅图之间，此时横线可以不画
     if (info.yLabel) {

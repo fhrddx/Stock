@@ -328,6 +328,7 @@ export default class kline {
       let item = this.arrayList[i];
       //先定下颜色
       this.canvasCxt.beginPath();
+      this.canvasCxt.lineWidth = 1;
       this.canvasCxt.strokeStyle =
         item.sp >= item.jk ? this.config.redColor : this.config.greenColor;
       //当天是一字线的情况
@@ -398,7 +399,7 @@ export default class kline {
     //画出K线图的5条横线
     const split = this.mainChartHeight / 4;
     this.canvasCxt.beginPath();
-    this.canvasCxt.lineWidth = 1;
+    this.canvasCxt.lineWidth = 0.5;
     this.canvasCxt.strokeStyle = gridColor;
     for (let i = 0; i <= 4; i++) {
       const splitHeight = Math.floor(split * i) + lineMessageHeight!;
