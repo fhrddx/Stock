@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { stockItemData, throttle } from './common';
+import { stockItemData, throttle } from '../chart/common';
 import './index.scss';
-import kline from './kline';
-import { touchPan } from './touchPan';
+import kline from '../chart/kline';
+import { touchPan } from '../chart/touchPan';
 
 export default function Index() {
   const init = () => {
