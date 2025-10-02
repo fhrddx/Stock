@@ -1,6 +1,17 @@
 import { stockItemData } from "../chart/common";
 
 export default function Info({ detail } : { detail: stockItemData | null } ){
+
+  const unit = (temp: number) => {
+    if(temp > 1e8){
+      return (temp / 1e8).toFixed(2) + '亿';
+    }else if(temp > 1e4){
+      return (temp / 1e4).toFixed(2) + '万';
+    }else{
+      return (temp / 1).toFixed(2);
+    }
+  }
+
   if(detail === null){
     return(
         <div id="detail">
@@ -82,10 +93,10 @@ export default function Info({ detail } : { detail: stockItemData | null } ){
             换手<span className="number">{detail.hs}%</span>
           </div>
           <div className="table-cell">
-            总手<span className="number">-</span>
+            总手<span className="number">{unit(detail.zs)}</span>
           </div>
           <div className="table-cell">
-            金额<span className="number">-</span>
+            金额<span className="number">{unit(detail.je)}</span>
           </div>
         </div>
         <div className="table-line">
