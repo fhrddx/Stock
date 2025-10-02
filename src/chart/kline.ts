@@ -437,7 +437,7 @@ export default class kline {
       );
     }
     this.canvasCxt.textBaseline = 'top';
-    this.canvasCxt.fillText(max.toFixed(2), 1, this.config.lineMessageHeight!);
+    this.canvasCxt.fillText(max.toFixed(2), 1, this.config.lineMessageHeight! + transY);
 
     //x轴最左边的刻度
     this.canvasCxt.beginPath();
