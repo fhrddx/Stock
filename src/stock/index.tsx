@@ -41,12 +41,13 @@ export default function Index() {
 
   return (
     <div className="main-content">
+
       <div id="detail">
         <div className="header-banner banner-border">
           <span className="header-back"></span>
           <div className="header-title">
-            板块<br/>
-            <span>BK</span>
+            比亚迪<br/>
+            <span>002594</span>
           </div>
         </div>
         <div className="hq-container">
