@@ -15,11 +15,11 @@ export default function Index() {
     const stock = '0.002594';
 
     const getNewestData = (item: stockItemData) => {
-      console.log('最新的数据是：' + JSON.stringify(item));
+      setDetail(item);
     };
 
     const changeIndex = throttle((item: stockItemData) => {
-      console.log('hover：' + JSON.stringify(item));
+      setDetail(item);
     }, 150);
 
     //实例化第一个canvas面板

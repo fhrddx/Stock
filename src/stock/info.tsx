@@ -62,24 +62,24 @@ export default function Info({ detail } : { detail: stockItemData | null } ){
           </div>
         </div>
         <div className="hq-container">
-          <span className="number-text big">--</span>
-          <span className="number-text"></span>
-          <span className="number-text"></span>
+          <span className={`number-text big ${detail.sp >= detail.jk ? 'red' : 'green'}`}>{detail.sp}</span>
+          <span className={`number-text ${detail.sp >= detail.jk ? 'red' : 'green'}`}>{detail.zf}%</span>
+          <span className={`number-text ${detail.sp >= detail.jk ? 'red' : 'green'}`}>{detail.zds}</span>
         </div>
         <div className="table-line">
           <div className="table-cell">
-            今开<span className="number">-</span>
+            今开<span className="number">{detail.jk}</span>
           </div>
           <div className="table-cell">
-            最高<span className="number">-</span>
+            最高<span className="number">{detail.zg}</span>
           </div>
           <div className="table-cell">
-            最低<span className="number">-</span>
+            最低<span className="number">{detail.zd}</span>
           </div>
         </div>
         <div className="table-line">
           <div className="table-cell">
-            换手<span className="number">-</span>
+            换手<span className="number">{detail.hs}%</span>
           </div>
           <div className="table-cell">
             总手<span className="number">-</span>
