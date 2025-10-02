@@ -76,6 +76,7 @@ export class touchPan {
         }
         this.timeOut = setTimeout(() => {
           this.canvasCxt.clearRect(0, 0, width, height);
+          this.callbackFun?.(this.klineChart.newestItem);
         }, 1000);
       }
       this.isLongPress = false;
