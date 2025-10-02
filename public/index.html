@@ -25,6 +25,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+     <script>
+            (function (doc, win, fontSizeMax) {
+                var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = parseInt(20 * (clientWidth / 375));
+                        if (fontSizeMax > 0 && fontSize > fontSizeMax) {
+                            fontSize = fontSizeMax;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+                    };
+                if (!doc.addEventListener) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window, 0);
+        </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
