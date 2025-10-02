@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { stockItemData, throttle } from '../chart/common';
 import './index.scss';
 import kline from '../chart/kline';
@@ -6,6 +6,8 @@ import { touchPan } from '../chart/touchPan';
 import Info from './info';
 
 export default function Index() {
+  const [detail, setDetail] = useState<stockItemData | null>(null);
+
   const init = () => {
     const container = document.getElementById('container')!;
     const width = Math.floor(container.clientWidth);
@@ -42,7 +44,7 @@ export default function Index() {
 
   return (
     <div className="main-content">
-      <Info></Info>
+      <Info detail={detail}></Info>
         
       <div className="tab-container">
         <ul className="tab">
