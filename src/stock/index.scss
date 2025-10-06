@@ -1,8 +1,10 @@
 @import './base.scss';
 
 .main-content{
-  //border: 1px solid red;
+  border: 0.05rem solid #E5E5E5;
   width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
   min-height: 95vh;
   //display: flex;
   flex-direction: column;

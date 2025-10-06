@@ -32,6 +32,9 @@
                     recalc = function () {
                         var clientWidth = docEl.clientWidth;
                         if (!clientWidth) return;
+                        if(clientWidth >= 430){
+                          clientWidth = 430;
+                        }
                         var fontSize = parseInt(20 * (clientWidth / 375));
                         if (fontSizeMax > 0 && fontSize > fontSizeMax) {
                             fontSize = fontSizeMax;
